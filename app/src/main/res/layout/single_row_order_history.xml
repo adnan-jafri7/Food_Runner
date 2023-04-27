@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/orderHistoryRL">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/orderHistoryLL"
+        android:orientation="horizontal"
+        android:weightSum="5">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="3.5"
+            android:layout_height="wrap_content"
+            android:text="Restaurant Name"
+            android:textStyle="bold"
+            android:id="@+id/txtRestaurantName"
+            android:textColor="#000000"
+            android:layout_marginLeft="10dp"
+            android:textSize="18sp"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtDate"
+            android:text="13/07/2020"
+            android:layout_weight="1.5"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            />
+
+
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerOrderHistory"
+        android:layout_width="match_parent"
+        android:layout_below="@id/orderHistoryLL"
+        android:layout_height="wrap_content"
+        android:padding="5dp" />
+    <View
+        android:layout_below="@id/recyclerOrderHistory"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#b5b5b5"/>
+
+</RelativeLayout>
